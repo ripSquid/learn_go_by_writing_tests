@@ -27,9 +27,8 @@ func BenchmarkRepeat(b *testing.B) {
 	}
 }
 
-func nop() {
-
-}
+//go:noinline
+func nop() {}
 
 func BenchmarkCompare(b *testing.B) {
 	for i := 0; i < b.N; i++ {
